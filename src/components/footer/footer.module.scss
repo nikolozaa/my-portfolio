@@ -1,0 +1,8 @@
+@import "../../styles/variables.scss";
+.bottom {
+	height: 40px;
+	background-color: $primaryColor;
+	// background-color: red;
+	margin-top: 20px;
+	bottom: 0;
+}

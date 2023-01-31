@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+
+.teamMemberMainContainer {
+	width: 270px;
+	height: 300px;
+	// padding: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 20px;
+	margin: 20px;
+	// background-color: #384852;
+}
+
+.img {
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+	transition: 1s ease-in-out;
+}
+
+.img1 {
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+	transition: all 1s ease-in-out;
+	background: rgba(0, 0, 0, 0.7);
+	background-blend-mode: darken;
+	background-position: center;
+	background-size: contain;
+	// &:hover{
+	// background: rgba(0,0,0,0.7);
+	// background-blend-mode: darken;
+	// }
+}
+
+.imgOnMouseEnter {
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+	background-color: black;
+	// border-radius: 50% 20% / 10% 40%;
+	transition: 0.3s ease-in-out;
+	opacity: 0.2;
+}
+
+.membersInfoMainContainer {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: center;
+	width: 270px;
+	height: 300px;
+	transition-property: all;
+	transition: ease-in-out;
+	transition-duration: 1s;
+	@media only screen and (max-width: $mobile) {
+		justify-content: flex-end;
+	}
+	// transition-delay: 1s;
+	// opacity: 1;
+}
+
+.test {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	font-family: mainFont;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	// -webkit-text-stroke: 1px white;
+	letter-spacing: 3px;
+	transition-property: all;
+	transition: ease-in-out;
+	transition-delay: 1s;
+}
+
+.profileImg {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+// .membersInfoMainContainer {
+// 	display: flex;
+// 	flex-direction: column;
+// 	position: absolute;
+// 	align-items: center;
+// 	// justify-content: center;
+// 	justify-content: space-around;
+// 	font-family: mainFont;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// 	color: $primaryColor;
+// 	width: 270px;
+// 	height: 300px;
+// 	transition-property: all;
+// 	transition: ease-in-out;
+// 	transition-duration: 1s;
+// }

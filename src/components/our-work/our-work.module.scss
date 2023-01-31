@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.ourWorkMainContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.ourWorkDescription {
+	font-size: 30px;
+	color: $fontColor;
+	text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+		-1px -1px 0 #000;
+}
+
+.playList {
+	margin-top: 20px;
+}
+
+.playListMobile {
+	display: none;
+	@media only screen and (max-width: $mobile) {
+		display: flex;
+		margin-top: 20px;
+	}
+}

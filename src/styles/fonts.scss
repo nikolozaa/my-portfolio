@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "mainFont";
+	src: local("AirbnbCerealLight"),
+		url("/fonts/Jost-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "scrollDownFont";
+	src: local("AirbnbCerealLight"),
+		url("/fonts/Oswald-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "aboutUsFont";
+	src: local("AirbnbCerealLight"),
+		url("/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+.aboutUsFont {
+	font-family: aboutUsFont;
+}
+
+.scrollDownFont {
+	font-family: scrollDownFont;
+}
+
+.mainFont {
+	font-family: mainFont;
+}

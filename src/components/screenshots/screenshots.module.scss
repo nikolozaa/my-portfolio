@@ -1,0 +1,249 @@
+@import "../../styles/variables.scss";
+
+.screenshotMainContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	background-color: $mainBackgroundColor;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.screenShots {
+	width: 500px;
+	height: 300px;
+	margin-top: 20px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	cursor: pointer;
+	@media only screen and (max-width: $mobile) {
+		width: 355px;
+		height: 177.5px;
+	}
+	// @media only screen and (max-width: 1339px) {
+	// 	width: 500px;
+	// }
+}
+
+.screenShotsContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 220px;
+	padding-right: 200px;
+	// width: 1450px;
+	@media only screen and (max-width: $mobile) {
+		flex-direction: column;
+		padding: 0px;
+		// width: 350px; axali
+	}
+	@media only screen and (max-width: $pad) {
+		justify-content: center;
+		// width: 800px; axali
+	}
+}
+
+.test {
+	width: 100%;
+	height: 500px;
+	// background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
+	background-position: center;
+	background-size: cover;
+	object-fit: cover;
+}
+
+.model {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0000;
+	transition: opacity 0.4s ease, visibility 0.4s ease,
+		transform 0.5s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0);
+	overflow: hidden;
+	z-index: 999999;
+}
+
+.modelOpen {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.model img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+	display: block;
+	line-height: 0;
+	box-sizing: border-box;
+	padding: 20px 0 20px;
+	margin: 0 auto;
+}
+
+// .test {
+// 	display: flex;
+// 	position: absolute;
+// 	// width: 100%;
+// 	// height: 100%;
+// }
+
+.closeIcon {
+	cursor: pointer;
+	color: white;
+	width: 24px;
+	height: 24px;
+	margin: 10px;
+	position: absolute;
+}
+
+.idk {
+	display: flex;
+	// width: 500px;
+	width: 100%;
+	height: 575px;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	border-radius: 20px;
+	@media only screen and (max-width: $mobile) {
+		// width: 250px;
+		height: 500px;
+	}
+}
+
+.popUpBackgroundColor {
+	background-color: transparent;
+	padding: 0px !important;
+}
+
+.opop {
+	border-radius: 20px;
+}
+
+.btnPrev {
+	top: 50%;
+	transform: translateY(-350%);
+	left: 40px;
+	position: absolute;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.btnRestart {
+	top: 40%;
+	// transform: translateY(-350%);
+	left: 50%;
+	position: absolute;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	&:hover {
+		opacity: 1;
+		-webkit-animation: btn-restart 1s ease-in-out;
+		animation: btn-restart 1s ease-in-out;
+		transition: 1s;
+	}
+}
+
+@keyframes btn-restart {
+	0% {
+		transform: rotate(360deg);
+	}
+}
+// @-webkit-keyframes btn-restart {
+// 	0% {
+// 		-webkit-transform: rotate(0);
+// 		transform: rotate(0);
+
+// 	}
+// 	100% {
+// 		-webkit-transform: rotate(360deg);
+// 		transform: rotate(360deg);
+// 	}
+
+// }
+// @keyframes btn-restart {
+// 	0% {
+// 		-webkit-transform: rotate(0);
+// 		transform: rotate(0);
+// 	}
+// 	100% {
+// 		-webkit-transform: rotate(360deg);
+// 		transform: rotate(360deg);
+// 	}
+// }
+
+.btnNext {
+	top: 50%;
+	transform: translateY(-350%);
+	right: 40px;
+	position: absolute;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.popUpAllImgContainer {
+	display: flex;
+	flex-direction: row;
+	background: transparent;
+}
+
+.popUpScreenShots {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	cursor: pointer;
+	// @media only screen and (max-width: $mobile) {
+	// 	width: 355px;
+	// 	height: 177.5px;
+	// }
+	// @media only screen and (max-width: 1339px) {
+	// 	width: 500px;
+	// }
+}
+
+.eachPopUpListImg {
+	padding: 10px;
+}
+
+.selectedImgInPopUp {
+	// border-color: blue;
+	border: solid $mainBackgroundColor 5px;
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	cursor: pointer;
+}

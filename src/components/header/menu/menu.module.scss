@@ -1,0 +1,58 @@
+@import "../../../styles/variables.scss";
+
+.menu {
+	font-family: "Pacifico";
+	display: flex;
+}
+.buttons {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	@media only screen and (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.buttonsPopup {
+	position: absolute;
+	display: none;
+	background-color: $primaryColor;
+	border-bottom-left-radius: 10px;
+	margin-top: 50px;
+	right: 0px;
+	z-index: 20;
+	width: 150px;
+	padding-bottom: 20px;
+	@media only screen and (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.buttonsPopupClosed {
+	display: none;
+}
+
+.menuItem {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: $fontColor;
+}
+
+.iconMenu {
+	height: 30px;
+	display: none;
+	cursor: pointer;
+	transition: 0.5s;
+	@media only screen and (max-width: $mobile) {
+		display: inline;
+	}
+}
+
+.iconMenuOpen {
+	@media only screen and (max-width: $mobile) {
+		transition: 0.5s;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+}

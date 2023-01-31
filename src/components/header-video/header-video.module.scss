@@ -1,0 +1,119 @@
+@import "../../styles/variables.scss";
+
+.mainHeaderContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.headerVideo {
+	@media only screen and (min-width: $pad) {
+		min-width: 100%;
+		min-height: 100vh;
+		object-fit: cover;
+	}
+
+	@media only screen and (max-width: $pad) {
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+	}
+
+	// width: 100%;
+	// height: 100%;
+}
+
+.scrolldown {
+	opacity: 1;
+	-webkit-transition: all 0.5s ease-in 3s;
+	transition: all 0.5s ease-in 3s;
+}
+
+.scrolldownContainer {
+	padding-top: 10px;
+
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scrolldownMainCircle {
+	display: flex;
+	border: 2px solid $fontColor;
+	border-radius: 50%;
+	box-shadow: 0px 0px 25px $primaryColor;
+}
+
+.scrolldown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background-color: $primaryColor;
+	transition: 1s;
+
+	&:hover {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.scrolldownArrow {
+	transform: rotate(-45deg);
+	width: 25px;
+	height: 25px;
+	content: "";
+	border: 2px solid $fontColor;
+	border-width: 0px 0 2px 2px;
+	margin-top: -10px;
+}
+
+.text {
+	// font-family: scrollDownFont;
+	font-family: scrollDownFont;
+	color: #eceef5;
+	font-size: 40px;
+	text-shadow: -1px 1px 7px #000;
+	letter-spacing: 3px;
+}
+
+.motherDearText {
+	font-family: scrollDownFont;
+	color: #eceef5;
+	font-size: 80px;
+	text-shadow: -1px 1px 7px #000;
+	letter-spacing: 3px;
+	text-align: center;
+	font-weight: bold;
+	@media only screen and (max-width: $mobile) {
+		font-size: 60px;
+	}
+}
+
+.scrollDownMainContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	flex-direction: column;
+	color: white;
+	z-index: 1;
+}
+
+.headerMainContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.scrollDownContainer {
+	display: flex;
+	flex-direction: column;
+}

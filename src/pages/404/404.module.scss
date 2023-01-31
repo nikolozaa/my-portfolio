@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.body {
+	display: flex;
+	flex: 1;
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+	font-family: "Pacifico";
+	font-size: 50px;
+}
+
+.errorText {
+	text-align: center;
+}

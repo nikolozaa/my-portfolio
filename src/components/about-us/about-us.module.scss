@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.body {
+	height: calc(100vh - 100px);
+	font-family: "poppins";
+	display: flex;
+	font-size: 20px;
+	justify-content: center;
+	padding: 20px 20px 20px 20px;
+	flex-wrap: wrap;
+	width: 100%;
+	background-image: url("/images/background-pic1.png");
+	background-position: center;
+	background-size: cover;
+	font-family: mainFont;
+	// flex-direction: column;
+	// opacity: 0.6;
+}
+
+.test {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.textArea {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	color: white;
+	flex-direction: column;
+	@media only screen and (max-width: $mobile) {
+		flex-wrap: wrap;
+	}
+}
+
+.underLineForSubscribe {
+	border-bottom: 1px solid #eceef5;
+	width: 85px;
+}
+
+.subscribeContainer {
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+	@media only screen and (max-width: $mobile) {
+		margin-top: 20px;
+	}
+}
+
+.aboutGame {
+	display: flex;
+	text-align: center;
+}
+
+.subscribe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// padding-top: 470px;
+}

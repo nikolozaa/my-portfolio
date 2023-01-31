@@ -1,0 +1,125 @@
+@import "../../styles/variables.scss";
+
+.header {
+	display: flex;
+	flex-direction: column;
+}
+
+.headerTopLine {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+	height: 75px;
+	background-color: $primaryColor;
+	padding-right: 50px;
+	padding-left: 230px;
+	@media only screen and (max-width: $mobile) {
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		padding-right: 5px;
+	}
+}
+
+.menu {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-right: 30px;
+	@media only screen and (max-width: $mobile) {
+		padding-left: 10px;
+		flex: 0;
+		margin-right: 0px;
+	}
+}
+
+.socialMediaIconContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.iconLink {
+	height: 30px;
+}
+
+.iconYoutube {
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+}
+.iconFacebook {
+	height: 30px;
+	width: 30px;
+}
+
+.logoTitle {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	width: fit-content;
+	padding-left: 60px;
+	text-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+	//text-shadow: 3px ​5px 4px #000;
+	@media only screen and (max-width: $mobile) {
+		padding-left: 3px;
+		align-items: center;
+	}
+}
+
+.logo {
+	height: 130px;
+	margin-top: -68px;
+	cursor: pointer;
+	transition: 0s;
+}
+
+.logoTransition {
+	transition: 1s;
+	transform: rotate(720deg);
+	-webkit-transform: rotate(720deg);
+}
+
+.rotateLogo {
+	transition: 1s;
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.logoContainer {
+	z-index: 100;
+	height: 85px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+	background-color: $primaryColor;
+}
+.title {
+	margin-top: -1px;
+	font-size: 50px;
+	font-family: "Pacifico" !important;
+	letter-spacing: 10px;
+	width: auto;
+	line-height: 66px;
+	@media only screen and (max-width: $mobile) {
+		margin-top: -20px;
+		font-size: 45px;
+	}
+}
+
+.socialIcon {
+	padding: 5px;
+}
+
+.tiktokIcon {
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

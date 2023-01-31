@@ -1,0 +1,260 @@
+@import "../../styles/variables.scss";
+
+.bottom {
+	background-color: $primaryColor;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	align-items: center;
+	font-family: mainFont;
+	// @media only screen and (max-width: $mobile) {
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// }
+}
+
+.socialsMainContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+	justify-content: center;
+	// :not(:first-child) {
+	// 	margin-left: 10px;
+	// }
+	@media only screen and (max-width: $mobile) {
+		margin-top: 10px;
+	}
+}
+
+.socialsIconContainer {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	@media only screen and (max-width: $mobile) {
+		padding: 10px;
+	}
+}
+
+.socialsText {
+	font-size: 30px;
+	color: $fontColor;
+	@media only screen and (max-width: $mobile) {
+		margin-left: 0px;
+	}
+}
+
+.subsciprtionMainContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.text {
+	// width: 100%;
+	font-size: 25px;
+	color: $fontColor;
+	align-items: center;
+	display: flex;
+	margin-top: -8px;
+	flex-wrap: nowrap;
+	justify-content: center;
+	@media only screen and (max-width: $mobile) {
+		margin-left: 0px;
+		font-size: 25px;
+	}
+}
+
+.inputTextField {
+	width: 218px;
+	line-height: 50px;
+	background-color: $primaryColor;
+	//  background-color: red;
+	outline: none;
+	font-size: 16px;
+	color: $fontColor;
+	border-width: 0 0 2px;
+	animation: 4s infinite;
+	// margin-left: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	text-align: center;
+	@media only screen and (max-width: $mobile) {
+		width: 200px;
+		font-size: 15px;
+		margin-left: 0px;
+	}
+}
+
+.inputTextField::placeholder {
+	font-family: mainFont;
+	@media only screen and (max-width: $mobile) {
+		text-align: center;
+	}
+}
+
+.inputTextField:focus {
+	border-color: #eceef5;
+	animation: none;
+}
+
+.deniedMail {
+	width: 218px;
+	line-height: 50px;
+	background-color: $primaryColor;
+	//  background-color: red;
+	border-color: red;
+	outline: none;
+	font-size: 16px;
+	color: $fontColor;
+	border-width: 0 0 2px;
+	animation: 4s infinite;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	@media only screen and (max-width: $mobile) {
+		width: 200px;
+		font-size: 15px;
+		margin-left: 0px;
+	}
+}
+
+.deniedMail::placeholder {
+	font-family: mainFont;
+	@media only screen and (max-width: $mobile) {
+		text-align: center;
+	}
+}
+
+.deniedMail:focus {
+	border-color: red;
+	animation: none;
+}
+
+//   @keyframes test {
+// 	0% {
+// 	  border-color: red;
+// 	}
+// 	25% {
+// 	  border-color: blue;
+// 	}
+// 	75% {
+// 	  border-color: yellow;
+// 	}
+// 	100% {
+// 	  border-color: purple;
+// 	}
+//   }
+
+.button {
+	background-color: #ffffff;
+	border: none;
+	border-radius: 0.5rem;
+	font-family: mainFont;
+	box-sizing: border-box;
+	color: #111827;
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.25rem;
+	padding: 0.75rem 1rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	text-decoration: none #d1d5db solid;
+	cursor: pointer;
+	width: 200px;
+	height: 40px;
+	// margin-left: 30px;
+	margin-top: 5px;
+	@media only screen and (max-width: $mobile) {
+		width: 90px;
+		margin-left: 0px;
+	}
+}
+
+.button:hover {
+	background-color: #9b9b9b;
+}
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0px 0px 15px #acacac;
+}
+
+.igIcon {
+	margin-left: 10px;
+}
+
+.youtubeIcon {
+	margin-left: 10px;
+}
+
+.subscribeMainContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 750px;
+	justify-content: space-around;
+	@media only screen and (max-width: $mobile) {
+		width: 300px;
+		flex-direction: column;
+	}
+}
+
+.borderLine {
+	width: 80%;
+	padding-top: 20px;
+	border-bottom: 1px solid #eceef5;
+}
+
+.borderLineForSecondSection {
+	padding-top: 20px;
+	border-left: 1px solid #eceef5;
+}
+
+.secondFooterSection {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 20px;
+	width: 90%;
+}
+
+.pagesContianerForFooter {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	line-height: 30px;
+	color: $fontColor;
+}
+
+.pagesFooterFirstSection {
+	display: flex;
+	flex-direction: column;
+}
+
+.pagesFooterSecondSection {
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+}
+
+.test {
+	padding: 20px;
+	color: $fontColor;
+}
+
+.subsciptionMessage {
+	color: white;
+	display: flex;
+	justify-content: center;
+}

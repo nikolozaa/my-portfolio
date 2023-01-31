@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+// ANIMATION FOR HEADER TO CAS SHADOWS
+.animatedPaper {
+	-webkit-animation: shadow-drop-center 2s;
+	animation: shadow-drop-center 2s;
+	box-shadow: $paperShadow;
+}
+
+@-webkit-keyframes shadow-drop-center {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+		-webkit-box-shadow: $paperShadow;
+		box-shadow: $paperShadow;
+	}
+}
+@keyframes shadow-drop-center {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+	100% {
+		-webkit-box-shadow: $paperShadow;
+		box-shadow: $paperShadow;
+	}
+}
+
+// ANIMATION TO ROTATE LOGO
+.rotateCenter {
+	-webkit-animation: rotate-center 1s ease-in-out both;
+	animation: rotate-center 1s ease-in-out both;
+	transition: 1s;
+}
+
+@-webkit-keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+//ANIMATION TO SLIDE IN TITLE
+.slideRight {
+	-webkit-animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-right {
+	0% {
+		-webkit-transform: translateX(calc(200px));
+		transform: translateX(calc(200px));
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes slide-right {
+	0% {
+		-webkit-transform: translateX(calc(200px));
+		transform: translateX(calc(200px));
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}

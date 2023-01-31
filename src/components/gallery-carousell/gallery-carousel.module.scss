@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.galleryDesktop {
+	justify-content: center;
+	align-items: center;
+	height: 550px;
+	width: 400px;
+	display: block;
+	background-color: red;
+	@media only screen and (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.galleryMobile {
+	display: none;
+	@media only screen and (max-width: $mobile) {
+		display: block;
+		height: 287px;
+		width: 340px;
+		background-color: red;
+	}
+}
+.thumbnailImage {
+	width: 2px;
+	height: 2px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: red;
+
+	@media only screen and (max-width: $mobile) {
+		width: 75px;
+		height: 75px;
+	}
+}

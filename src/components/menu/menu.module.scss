@@ -1,0 +1,121 @@
+@import "../../styles/variables.scss";
+@import "../../styles/fonts.scss";
+
+.menu {
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: $primaryColor;
+	@media only screen and (min-width: $mobile) {
+		opacity: 0;
+		transition: 1s;
+	}
+}
+
+.menuOpen {
+	@media only screen and (min-width: $mobile) {
+		opacity: 1;
+	}
+}
+
+.mobileMenuOpen {
+	@media only screen and (max-width: $mobile) {
+		opacity: 0;
+	}
+}
+
+.buttons {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	@media only screen and (max-width: $mobile) {
+		display: none;
+	}
+}
+
+.buttonsPopup {
+	position: fixed;
+	display: none;
+	background-color: $primaryColor;
+	border-bottom-left-radius: 10px;
+	margin-top: 50px;
+	z-index: 20;
+	width: 150px;
+	padding-bottom: 20px;
+	@media only screen and (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		margin-top: 0px;
+		border: 10px;
+		top: 60px;
+		right: 0px;
+	}
+}
+
+.buttonsPopupClosed {
+	display: none;
+}
+
+.menuItem {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 20px;
+	color: $fontColor;
+	cursor: pointer;
+	font-family: mainFont;
+}
+
+.iconMenu {
+	height: 50px;
+	display: none;
+	cursor: pointer;
+	transition: 0.5s;
+	@media only screen and (max-width: $mobile) {
+		display: inline;
+		top: 0;
+	}
+}
+
+.iconMenuOpen {
+	@media only screen and (max-width: $mobile) {
+		transition: 0.5s;
+		-webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+}
+
+.menuMainContainer {
+	width: 100%;
+	height: 100px;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	transition: 1s;
+	@media only screen and (max-width: $mobile) {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+}
+
+.mobileMenuContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	transition: 1s;
+	@media only screen and (min-width: $mobile) {
+		display: none;
+	}
+}
+
+.headerVisibilityForPhone {
+	@media only screen and (max-width: $mobile) {
+		display: none;
+	}
+}
