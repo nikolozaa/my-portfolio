@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .getInTouchMainContainer {
 	min-width: 100%;
 	min-height: 100vh;
@@ -39,4 +41,29 @@
 	width: 250px;
 	height: 40px;
 	outline: none !important;
+}
+
+.inputTextField {
+	width: 218px;
+	line-height: 50px;
+	background-color: transparent;
+	//  background-color: red;
+	outline: none;
+	font-size: 16px;
+	color: $fontColor;
+	border-width: 0 0 2px;
+	animation: 4s infinite;
+	// margin-left: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	text-align: center;
+	@media only screen and (max-width: $mobile) {
+		width: 200px;
+		font-size: 15px;
+		margin-left: 0px;
+	}
+}
+
+.inputTextField:focus {
+	border-color: #7dcfb6;
 }

@@ -7,7 +7,26 @@ export default function GetInTouch() {
 			<div className={classes.seceondayFrom}>
 				<div className={classes.mainFrom}>
 					<div className={classes.mainFormContainer}>
-						<input className={classes.inputField} type="text" />
+						<input
+							placeholder="email@email.com"
+							className={classes.inputTextField}
+							type="text"
+						/>
+						<input
+							placeholder="First Name"
+							className={classes.inputTextField}
+							type="text"
+						/>
+						<input
+							placeholder="Last Name"
+							className={classes.inputTextField}
+							type="text"
+						/>
+						<input
+							placeholder="Chat"
+							className={classes.inputTextField}
+							type="text"
+						/>
 					</div>
 				</div>
 			</div>
