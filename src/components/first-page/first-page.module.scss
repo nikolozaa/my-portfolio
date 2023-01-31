@@ -1,0 +1,78 @@
+@import "../../styles/variables.scss";
+
+.mainFirstPageBackground {
+	min-width: 100%;
+	min-height: 100vh;
+	display: flex;
+}
+
+.firstPageContainer {
+	padding: 100px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 1400px;
+	min-height: 100vh;
+	justify-content: space-between;
+}
+
+.developer {
+	font-size: mainFont;
+	font-size: 40px;
+	color: #ffd662ff;
+}
+
+.hi {
+	color: #e63b60;
+	font-size: 50px;
+}
+
+.nick {
+	color: #7dcfb6;
+	font-size: 45px;
+}
+
+.aboutMe {
+	display: flex;
+	flex-direction: column;
+}
+
+.photo {
+	width: 500px;
+	height: 700px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	opacity: 0.5;
+	margin-top: 40px;
+	@media only screen and (max-width: $mobile) {
+		width: 355px;
+		height: 177.5px;
+	}
+	// @media only screen and (max-width: 1339px) {
+	// 	width: 500px;
+	// }
+}
+
+.fullstack {
+	text-decoration: none;
+	font-weight: 700;
+	position: relative;
+}
+
+.fullstack::before {
+	content: "";
+	background-color: hsla(196, 61%, 58%, 0.75);
+	position: absolute;
+	left: 0;
+	bottom: 3px;
+	width: 100%;
+	height: 8px;
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+
+.fullstack:hover::before {
+	bottom: 0;
+	height: 100%;
+}

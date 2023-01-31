@@ -1,0 +1,43 @@
+.aboutMeMainContainer {
+	min-width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	color: gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 25px;
+}
+
+.aboutMe {
+	width: 500px;
+	height: 500px;
+	background-color: #384248;
+	padding: 30px;
+	border-radius: 40px;
+}
+
+.jsonValuesString {
+	color: #dc6601;
+}
+
+.jsonValuesNumber {
+	color: #c3e88d;
+}
+
+.jsonProps {
+	color: #c792ea;
+	margin-left: 10px;
+}
+
+.curlyBraces {
+	margin-left: 20px;
+}
+
+.expValues {
+	margin-left: 20px;
+}
+
+.langs {
+	margin-left: 20px;
+}

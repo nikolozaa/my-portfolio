@@ -25,12 +25,12 @@ const App = ({ Component, pageProps }: AppProps) => {
           `}
 			</Script>
 			<Head>
-				<title>Zambara</title>
+				<title>Nick Rukhadze</title>
 				<link rel="icon" type="image/png" href="/zambara-logo.jpeg" />
-				<meta property="og:url" content="https://zambara.co" />
+				<meta property="og:url" content="nickrukhadze.com" />
 				<meta property="og:type" content="website" />
-				<meta property="og:title" content="Zambara" />
-				<meta property="og:description" content={`LLC ZAMBARA`} />
+				<meta property="og:title" content="Nick Rukhadze" />
+				<meta property="og:description" content={`PORTFOLIO`} />
 				<meta
 					property="og:image"
 					content="https://mother-dear.com/images/poster.png"

@@ -1,0 +1,42 @@
+.getInTouchMainContainer {
+	min-width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	color: gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 25px;
+}
+
+.seceondayFrom {
+	width: 500px;
+	height: 500px;
+	background-color: orange;
+	padding: 30px;
+	border-radius: 40px;
+}
+
+.mainFrom {
+	width: 500px;
+	height: 500px;
+	background-color: #384248;
+	padding: 30px;
+	border-radius: 40px;
+	position: absolute;
+}
+
+.mainFormContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inputField {
+	border-radius: 20px;
+	border: none;
+	width: 250px;
+	height: 40px;
+	outline: none !important;
+}

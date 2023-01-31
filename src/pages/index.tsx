@@ -5,7 +5,22 @@ import Screenshots from "../components/screenshots/screenshots";
 import { MainHeaderMenu } from "../components/menu/menu.module";
 import { YoutubeVideo } from "../components/youtube-video/youtube-video.module";
 import { Subscribe } from "../components/subscribe-component/subcribe";
+import FirstPage from "../components/first-page/first-page";
+import AboutMe from "../components/about-me/about-me";
+import {
+	Animator,
+	batch,
+	Fade,
+	Move,
+	MoveOut,
+	ScrollContainer,
+	ScrollPage,
+	Sticky,
+} from "react-scroll-motion";
+import GetInTouch from "../components/get-in-touch/get-in-touch";
 export default function Home(): JSX.Element {
+	const FadeUp = batch(Fade(), Move(), Sticky());
+
 	return (
 		// <div className={classes.body}>
 		// 	<MainHeaderMenu />
@@ -23,15 +38,27 @@ export default function Home(): JSX.Element {
 		// 	</div>
 		// </div>
 		<>
-			<div className={classes.body}>
-				{/* <div className="page-title">
-						Our Project
-						<br />
-						Mother, Dear
+			<ScrollContainer>
+				<div className={classes.body}>
+					<ScrollPage>
+						<Animator animation={FadeUp}>
+							<div className={classes.headerVideoContainer}>
+								<FirstPage />
+							</div>
+						</Animator>
+					</ScrollPage>
+					{/* <ScrollPage>
+				<Animator animation={FadeUp}> */}
+					<div className={classes.aboutMe}>
+						<AboutMe />
 					</div>
-					<YoutubeVideo youtubeLink="https://www.youtube.com/embed/B0XDReVuuGo" /> */}
-				<Subscribe />
-			</div>
+					{/* </Animator>
+					</ScrollPage> */}
+					<div className={classes.getInTouch}>
+						<GetInTouch />
+					</div>
+				</div>
+			</ScrollContainer>
 		</>
 	);
 }
