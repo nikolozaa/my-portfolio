@@ -42,7 +42,9 @@ export function MainLayout({ children }: MainLayoutProps): JSX.Element {
 	return (
 		<div id="mainContainer" className={classes.mainContainer}>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			{/* <Pages/> */}
+			<div className={classes.pages}>
+				<Pages />{" "}
+			</div>
 
 			{/* <div
 				onTransitionEnd={() => {

@@ -28,3 +28,12 @@
 // 	  background-repeat: no-repeat;
 // 	  background-size: cover;
 // }
+
+.pages {
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	left: 30px;
+	top: 38%;
+}

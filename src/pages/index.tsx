@@ -38,27 +38,21 @@ export default function Home(): JSX.Element {
 		// 	</div>
 		// </div>
 		<>
-			<ScrollContainer>
-				<div className={classes.body}>
-					<ScrollPage>
-						<Animator animation={FadeUp}>
-							<div className={classes.headerVideoContainer}>
-								<FirstPage />
-							</div>
-						</Animator>
-					</ScrollPage>
-					{/* <ScrollPage>
-				<Animator animation={FadeUp}> */}
-					<div className={classes.aboutMe}>
-						<AboutMe />
-					</div>
-					{/* </Animator>
-					</ScrollPage> */}
-					<div className={classes.getInTouch}>
-						<GetInTouch />
-					</div>
+			<div className={classes.body}>
+				<div className={classes.headerVideoContainer} id="home">
+					<FirstPage />
 				</div>
-			</ScrollContainer>
+				{/* <ScrollPage>
+				<Animator animation={FadeUp}> */}
+				<div className={classes.aboutMe} id="about-me">
+					<AboutMe />
+				</div>
+				{/* </Animator>
+					</ScrollPage> */}
+				<div className={classes.getInTouch} id="get-in-touch">
+					<GetInTouch />
+				</div>
+			</div>
 		</>
 	);
 }

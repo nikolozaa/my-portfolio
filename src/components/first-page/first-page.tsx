@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Animator,
 	batch,
@@ -17,6 +17,7 @@ import classes from "./first-page.module.scss";
 export default function FirstPage() {
 	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 	const FadeUp = batch(Fade(), Move(), Sticky());
+	const [onMouseEnter, setOnMouseEnter] = useState<boolean>(false);
 
 	return (
 		// <div className={classes.mainFirstPageBackground}>
@@ -33,14 +34,42 @@ export default function FirstPage() {
 				</div>
 			</div>
 			<div>
-				<div
-					className={classes.photo}
-					style={{
-						backgroundImage: `url(/images/for-portfolio.png)`,
-					}}
-				/>
+				{onMouseEnter === true ? (
+					<div
+						className={classes.gif}
+						onMouseEnter={() => {
+							// setOnMouse(OnMouse => !OnMouse)
+							setOnMouseEnter(true);
+						}}
+						onMouseLeave={() => {
+							setOnMouseEnter(false);
+						}}
+						style={{
+							backgroundImage: `url(/gifs/nikita.gif)`,
+						}}
+					/>
+				) : (
+					<div
+						className={classes.photo}
+						onMouseEnter={() => {
+							// setOnMouse(OnMouse => !OnMouse)
+							setOnMouseEnter(true);
+						}}
+						onMouseLeave={() => {
+							setOnMouseEnter(false);
+						}}
+						style={{
+							backgroundImage: `url(/images/onHover.jpg)`,
+						}}
+					/>
+				)}
 			</div>
+			<div className={classes.img} />
 		</div>
 		//  </div>
 	);
 }
+
+// <video autoPlay muted loop className={classes.headerVideo}>
+// 				<source src="/videos/nikushita-video" />
+// 			</video>

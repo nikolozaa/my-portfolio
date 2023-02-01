@@ -24,7 +24,12 @@ export default async function handler(
 	}
 
 	try {
-		await createContact(req.body.email);
+		await createContact(
+			req.body.email,
+			req.body.firstname,
+			req.body.lastname,
+			req.body.bio,
+		);
 		return res.status(200).json({ success: true });
 	} catch {
 		return res.json({
@@ -33,16 +38,26 @@ export default async function handler(
 	}
 }
 
-export const createContact = async (email: string) => {
+export const createContact = async (
+	email: string,
+	firstname: string,
+	lastname: string,
+	bio: string,
+) => {
 	try {
 		client.setApiKey(
-			"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",
+			"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",
 		);
 		const data = {
-			list_ids: ["e5b7cfc4-77ef-4702-83b5-90e35d911ddc"],
+			list_ids: ["c331df2a-6f7d-4b86-a9e3-7e01aa63e8ba"],
 			contacts: [
 				{
 					email: email,
+					first_name: firstname,
+					last_name: lastname,
+					custom_fields: {
+						e6_T: bio,
+					},
 				},
 			],
 		};
