@@ -1,6 +1,13 @@
+@import "../../styles/variables.scss";
+
 .pagesMainContainer {
 	display: flex;
 	flex-direction: column;
+	@media only screen and (max-width: $mobile) {
+		flex-direction: row;
+		margin-top: 10px;
+		z-index: 1000000;
+	}
 }
 
 .homeAstro {
@@ -35,6 +42,10 @@
 		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
 	margin-top: 10px;
+	@media only screen and (max-width: $mobile) {
+		margin-left: 10px;
+		margin-top: 0px;
+	}
 }
 
 .backgroundCircleGetInTouch {
@@ -50,4 +61,8 @@
 		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
 	margin-top: 10px;
+	@media only screen and (max-width: $mobile) {
+		margin-left: 10px;
+		margin-top: 0px;
+	}
 }

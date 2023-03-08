@@ -36,4 +36,9 @@
 	align-items: center;
 	left: 30px;
 	top: 38%;
+	@media only screen and (max-width: $mobile) {
+		top: 0px;
+		left: 50%;
+		right: 50%;
+	}
 }

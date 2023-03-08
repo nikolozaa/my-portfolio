@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./get-in-touch.module.scss";
 import axios from "axios";
+import SubscribeSuccesPupup from "./get-in-touch-succses-popup/get-in-touch-succses-popup";
 
 export default function GetInTouch() {
 	const [email, setEmail] = useState<string>("");
@@ -8,6 +9,7 @@ export default function GetInTouch() {
 	const [lastname, setLastname] = useState<string>("");
 	const [bio, setBio] = useState<string>("");
 	const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const emailRegex =
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -25,6 +27,7 @@ export default function GetInTouch() {
 			firstname,
 			bio,
 		});
+		setIsModalOpen(true);
 	};
 
 	return (
@@ -79,13 +82,14 @@ export default function GetInTouch() {
 									Never mind dude enter your last name
 								</label>
 							) : null}
-							<textarea
-								placeholder="What do you have to say"
-								className={classes.whatDoYouWantToSayContainer}
-								onChange={(e) => setBio(e.target.value)}
-								value={bio}
-							/>
-							<br />
+							<div>
+								<textarea
+									placeholder="What do you have to say"
+									className={classes.whatDoYouWantToSayContainer}
+									onChange={(e) => setBio(e.target.value)}
+									value={bio}
+								/>
+							</div>
 							<button
 								className={classes.glowonhover}
 								type="submit"
@@ -99,6 +103,10 @@ export default function GetInTouch() {
 					</div>
 				</div>
 			</div>
+			<SubscribeSuccesPupup
+				isOpen={isModalOpen}
+				handleClick={() => setIsModalOpen(false)}
+			/>
 		</form>
 	);
 }

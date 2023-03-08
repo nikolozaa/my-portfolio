@@ -73,6 +73,34 @@ export default function AboutMe() {
 										</span>
 										,
 									</div>
+									<div>
+										<span className={classes.jsonProps}> "nodejs" </span>:{" "}
+										<span className={classes.jsonValuesString}>
+											<BatteryCharging90Icon />
+										</span>
+										,
+									</div>
+									<div>
+										<span className={classes.jsonProps}> "graphql" </span>:{" "}
+										<span className={classes.jsonValuesString}>
+											<BatteryCharging90Icon />
+										</span>
+										,
+									</div>
+									<div>
+										<span className={classes.jsonProps}> "react" </span>:{" "}
+										<span className={classes.jsonValuesString}>
+											<BatteryCharging90Icon />
+										</span>
+										,
+									</div>
+									<div>
+										<span className={classes.jsonProps}> "git" </span>:{" "}
+										<span className={classes.jsonValuesString}>
+											<BatteryCharging90Icon />
+										</span>
+										,
+									</div>
 								</div>
 								<div className={classes.curlyBraces}>{"}"}</div>
 							</div>

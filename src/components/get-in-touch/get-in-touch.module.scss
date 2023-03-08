@@ -9,6 +9,9 @@
 	align-items: center;
 	justify-content: center;
 	line-height: 25px;
+	@media only screen and (max-width: $mobile) {
+		padding: 0px;
+	}
 }
 
 .seceondayFrom {
@@ -21,6 +24,10 @@
 		0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
 		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
+	@media only screen and (max-width: $mobile) {
+		width: 300px;
+		margin-left: -20px;
+	}
 }
 
 .mainFrom {
@@ -39,6 +46,9 @@
 		0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
 		0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
+	@media only screen and (max-width: $mobile) {
+		width: 300px;
+	}
 }
 
 .mainFormContainer {
@@ -88,6 +98,9 @@
 .getInTouchText {
 	font-size: 30px;
 	color: #7dcfb6;
+	@media only screen and (max-width: $mobile) {
+		font-size: 20px;
+	}
 }
 
 .glowonhover {
@@ -272,13 +285,16 @@
 	width: 218px;
 	resize: none;
 	background-color: transparent;
-	color: white;
-	border: none;
 	border-width: 0 0 2px;
+	border: solid;
+	border-color: #384248;
+	color: white;
 }
 .whatDoYouWantToSayContainer::placeholder {
 	color: white;
+	display: flex;
 	text-align: center;
+	align-items: center;
 }
 
 .whatDoYouWantToSayContainer:focus {

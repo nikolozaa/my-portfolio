@@ -12,12 +12,15 @@ import {
 	StickyIn,
 	ZoomIn,
 } from "react-scroll-motion";
+import { useWindowDimensions } from "../hooks/use-window-dimensions";
 import classes from "./first-page.module.scss";
 
 export default function FirstPage() {
 	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 	const FadeUp = batch(Fade(), Move(), Sticky());
 	const [onMouseEnter, setOnMouseEnter] = useState<boolean>(false);
+	const windowDimensions = useWindowDimensions();
+	const mobileView = 800;
 
 	return (
 		// <div className={classes.mainFirstPageBackground}>
@@ -29,9 +32,13 @@ export default function FirstPage() {
 						<span className={classes.nick}>I'm Nick</span>
 					</div>
 				</div>
-				<div className={classes.developer}>
-					Full-Stack <span className={classes.fullstack}>Developer</span>
-				</div>
+				{windowDimensions.width > mobileView ? (
+					<div className={classes.developer}>
+						Full-Stack <span className={classes.fullstack}>Developer</span>
+					</div>
+				) : (
+					<div className={classes.developer}>Full-Stack Developer</div>
+				)}
 			</div>
 			<div>
 				{onMouseEnter === true ? (

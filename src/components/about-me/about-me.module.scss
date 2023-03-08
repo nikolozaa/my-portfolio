@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .aboutMeMainContainer {
 	min-width: 100%;
 	min-height: 100vh;
@@ -7,15 +9,21 @@
 	align-items: center;
 	justify-content: center;
 	line-height: 25px;
+	@media only screen and (max-width: $mobile) {
+		padding: 0px;
+	}
 }
 
 .aboutMe {
 	width: 500px;
-	height: 500px;
+	height: 100%;
 	background-color: #384248;
 	padding: 30px;
 	border-radius: 40px;
 	transition: 3s ease;
+	@media only screen and (max-width: $mobile) {
+		width: 300px;
+	}
 }
 
 .aboutMe:hover {

@@ -11,15 +11,20 @@ import {
 	Animator,
 	batch,
 	Fade,
+	FadeIn,
 	Move,
+	MoveIn,
 	MoveOut,
 	ScrollContainer,
 	ScrollPage,
 	Sticky,
+	StickyIn,
+	ZoomIn,
 } from "react-scroll-motion";
 import GetInTouch from "../components/get-in-touch/get-in-touch";
 export default function Home(): JSX.Element {
 	const FadeUp = batch(Fade(), Move(), Sticky());
+	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 
 	return (
 		// <div className={classes.body}>
@@ -42,13 +47,11 @@ export default function Home(): JSX.Element {
 				<div className={classes.headerVideoContainer} id="home">
 					<FirstPage />
 				</div>
-				{/* <ScrollPage>
-				<Animator animation={FadeUp}> */}
+
 				<div className={classes.aboutMe} id="about-me">
 					<AboutMe />
 				</div>
-				{/* </Animator>
-					</ScrollPage> */}
+
 				<div className={classes.getInTouch} id="get-in-touch">
 					<GetInTouch />
 				</div>
