@@ -13,7 +13,7 @@ export default function Projects() {
 			<div className="page-title">
 				Our Project
 				<br />
-				<a href="https://mother-dear.com/" target="_blank">
+				<a href="https://mother-dear.com/" target="_blank" rel="noreferrer">
 					Mother, Dear
 				</a>
 			</div>

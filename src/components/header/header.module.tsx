@@ -26,6 +26,7 @@ export function MainHeader({ isLoading }: MainHeaderProps): JSX.Element {
 						href="https://www.youtube.com/@ZambaraStudio"
 						className={classes.socialIcon}
 						target="_blank"
+						rel="noreferrer"
 					>
 						<YouTubeIcon />
 					</a>
@@ -33,6 +34,7 @@ export function MainHeader({ isLoading }: MainHeaderProps): JSX.Element {
 						href="https://www.facebook.com/ZambaraStudio"
 						className={classes.socialIcon}
 						target="_blank"
+						rel="noreferrer"
 					>
 						<FacebookIcon />
 					</a>

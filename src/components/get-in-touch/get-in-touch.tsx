@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./get-in-touch.module.scss";
 import axios from "axios";
 import SubscribeSuccesPupup from "./get-in-touch-succses-popup/get-in-touch-succses-popup";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function GetInTouch() {
 	const [email, setEmail] = useState<string>("");
@@ -30,8 +32,17 @@ export default function GetInTouch() {
 		setIsModalOpen(true);
 	};
 
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
-		<form className={classes.getInTouchMainContainer} onSubmit={handleSubmi1t}>
+		<form
+			data-aos="fade-up"
+			data-aos-duration="2000"
+			className={classes.getInTouchMainContainer}
+			onSubmit={handleSubmi1t}
+		>
 			<div className={classes.seceondayFrom}>
 				<div
 					className={classes.mainFrom}

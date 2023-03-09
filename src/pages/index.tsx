@@ -22,6 +22,10 @@ import {
 	ZoomIn,
 } from "react-scroll-motion";
 import GetInTouch from "../components/get-in-touch/get-in-touch";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
+
 export default function Home(): JSX.Element {
 	const FadeUp = batch(Fade(), Move(), Sticky());
 	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());

@@ -15,14 +15,27 @@
 	min-height: 100vh;
 	justify-content: space-around;
 	@media only screen and (max-width: $mobile) {
-		background-image: url("/images/onHover.jpg");
+		// background-image: url("/images/onHover.jpg");
+		// background-position: center;
+		// background-size: cover;
+		// object-fit: cover;
 	}
 }
+
+// section { background:
+// 	linear-gradient(
+// 	).
+// 	}
+// 	to right,
+// 	rgb(0 0 0
+// 	0.5),
+// 	rgb(0 0 0 / 0)
+// 	url(background.png);
 
 // url(/images/onHover.jpg)
 
 .developer {
-	font-family: mainFont;
+	// font-family: mainFont;
 	font-size: 40px;
 	color: #ffd662ff;
 	letter-spacing: 4px;
@@ -52,6 +65,10 @@
 	opacity: 0.7;
 	margin-top: 40px;
 	transition: 1s ease-in;
+	&:hover {
+		border-radius: 50% 20% / 10% 40%;
+		transition: 1s ease-in;
+	}
 	@media only screen and (max-width: $mobile) {
 		display: none;
 		width: 355px;
@@ -61,6 +78,11 @@
 	// 	width: 500px;
 	// }
 }
+
+// .photo:hover{
+// 	border-radius: 50% 20% / 10% 40%;
+// 	// transition: 1s ease-in;
+// }
 
 .gif {
 	width: 500px;

@@ -52,7 +52,7 @@ export default function Members() {
 		<div className={classes.membersMainContainer}>
 			{members.map((mem) => {
 				return (
-					<div className={classes.membersContianer}>
+					<div key={mem.id} className={classes.membersContianer}>
 						<MembersComponent
 							id={mem.id}
 							img={mem.img}

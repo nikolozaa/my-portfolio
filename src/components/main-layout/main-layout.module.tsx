@@ -18,6 +18,8 @@ import { MainFooter } from "../footer/footer.module";
 import { MainHeader } from "../header/header.module";
 import Pages from "../pages/pages";
 import classes from "./main-layout.module.scss";
+import "aos/dist/aos.css";
+import AOS from "aos";
 interface MainLayoutProps {
 	children: React.ReactNode;
 }
@@ -35,6 +37,10 @@ export function MainLayout({ children }: MainLayoutProps): JSX.Element {
 			setTransitionStage("fadeOut");
 		}
 	}, [children, displayChildren]);
+
+	useEffect(() => {
+		AOS.init();
+	}, []);
 
 	const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 	const FadeUp = batch(Fade(), Move(), Sticky());
